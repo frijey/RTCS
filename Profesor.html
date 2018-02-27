@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- //Instanciando la base de datos-->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCOxRKXX0g1E_1iryvDmiSwck6oIR26DXk",
+      authDomain: "sharedproyect.firebaseapp.com",
+      databaseURL: "https://sharedproyect.firebaseio.com",
+      projectId: "sharedproyect",
+      storageBucket: "sharedproyect.appspot.com",
+      messagingSenderId: "379754323405"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Califications Control System</title>
+  <style type="text/css">
+
+    <!--
+    #apDiv1 {
+      position: absolute;
+      left: 152px;
+      top: 46px;
+      width: 367px;
+      height: 150px;
+      z-index: 1;
+    }
+    -->
+  </style>
+  <script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+  <link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+  <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+  <style type="text/css">
+
+    <!--
+    body {
+      background-color: #000000;
+    }
+
+    .Estilo1 {
+	color: #000000;
+	text-transform: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+    }
+    -->
+  </style>
+</head>
+
+<body>
+  <!--<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBIOSD25Xtf7nSAGcCYHjShbL3_GPsONtw",
+          authDomain: "probando-1d6c3.firebaseapp.com",
+          databaseURL: "https://probando-1d6c3.firebaseio.com",
+          projectId: "probando-1d6c3",
+          storageBucket: "probando-1d6c3.appspot.com",
+          messagingSenderId: "1075472587654"
+      };
+      firebase.initializeApp(config);
+      var db = firebase.datebase();
+      db.ref("metadata").set({
+  </script>-->
+  <fieldset>
+    <div id="TabbedPanels1" class="TabbedPanels">
+      <ul class="TabbedPanelsTabGroup">
+        <li class="TabbedPanelsTab" tabindex="0"><a href="profesor.html">INICIO</a></li>
+        <li class="TabbedPanelsTab" tabindex="0">PARTICIPANTE</li>
+        <li class="TabbedPanelsTab" tabindex="0">ASIGNATURA</li>
+        <li class="TabbedPanelsTab" tabindex="0">EVALUACION</li>
+        <li class="TabbedPanelsTab" tabindex="0">Cerrar Sesion</li>
+      </ul>
+      <div class="TabbedPanelsContentGroup">
+        <div class="TabbedPanelsContent">
+          <div class="login-box">
+            <div class="login-logo">
+              <form action="" method="post" enctype="application/x-www-form-urlencoded" name="form3" target="new" class="active" id="form3" autocomplete="on"></form>
+            </div>
+            <!-- /.login-logo -->
+            <!--<div align="center" class="alert-dismissable">-->
+
+                  </label>
+                  <br />
+                    <label>Usuario</label>
+                    <br />
+                  <input name="name" type="text" class="active" id="usuariregistrar"/>
+                  <!-- Clip image with an oval -->
+                  <img src="Agregar-contactos-Yahoo-MSN-Messenger.png" alt="..." width="30" height="32" class="img-rounded" />
+                  <!-- Clip image with a circle --><!-- Clip image with a thumbnail -->
+                  <div class="form-group has-feedback">
+                    <br />
+                    <label>Email</label>
+                    <br />
+                    <input type="email" class="alert-dismissable" name="email" id="emailregistrar" />
+                    <img src="Иконка_письма_(ei).svg.png" alt="..." width="30" height="30" class="active" />
+                  </div>
+                  <div class="form-group has-feedback">
+
+                    <label>Contraseña</label>
+                    <br />
+                    <input type="password" class="active" name="password" id="passwordregistrar" />
+                  </div>
+                  <label>Tipo de Cuenta</label>
+                  <br />
+                  <select id="tipousuario">
+                    <option value="profesor">Profesor</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="padre">Padre</option>
+                    <option value="padre">Administrador</option>
+                  </select>
+                  <br />
+                  <br />
+
+                  <div class="row">
+                    <div class="col-xs-4 alert-dismissable" align="center">
+                      <button type="button" id="Registrar" class="btn btn-primary btn-block ">Registrar</button>
+
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                </form>
+
+            <!--</div>-->
+            <!-- /.login-box-body -->
+          </div>
+          <p>&nbsp;</p>
+        </div>
+        <div class="TabbedPanelsContent">
+          <p>
+            <label for="textfield3"><strong>ID</strong>:</label>
+            <input name="textfield" type="text" id="idestudiante" value="" style="text-align:center;" readonly=readonly />
+            <br />
+            <br />
+            <label for="textfield3"><strong>NOMBRE</strong>:</label>
+            <input name="textfield" type="text" id="NOMBRE" value="Jeffry" />
+            <label for="textfield2"><strong>APELLIDO</strong> :</label>
+            <input type="text" name="textfield" id="APELLIDO" value="Marte Bonifacio" />
+            <strong>NOMBRE_TUTOR</strong>:
+            <input type="text" name="textfield2" id="nombretutor" value="Euclides" />
+          </p>
+          <div id="nav">
+            <a href="https://probando-1d6c3.firebaseio.com/" target="_blank"></a>
+            <ul>
+              <label for="tel2"><strong>Tel</strong>:</label>
+              <input type="tel" name="tel" id="tel" value="809-952-5334" />
+              <strong>DIRECCION:</strong>
+              <input type="text" name="textfield3" id="direccion" value="Jarabacoa City" />
+              <label for="select2"><strong>GRADO</strong>:</label>
+              <select name="select" autofocus="autofocus" id="select">
+                <option>1-A</option>
+                <option>1-B</option>
+                <option>1-C</option>
+                <option>2-A</option>
+                <option>2-B</option>
+                <option>2-C</option>
+                <option>3-A</option>
+                <option>3-B</option>
+                <option>3-C</option>
+                <option>4-A</option>
+                <option>4-B</option>
+                <option>4-C</option>
+              </select>
+            </ul>
+            <label for="textfield4"><strong> EDAD</strong>:</label>
+            <input type="text" name="edad" id="edad" value="15" readonly=readonly />
+            <label for="date2"><strong>FECHA DE NACIMIENTO</strong>:</label>
+            <input type="date" name="date" id="date" value="1995-08-07" /><button id="botonagregar">AGREGAR</button>
+            <label> </label><button id="btnactualizarselec">ACTUALIZAR </button>
+            <form id="form1" name="form1" method="post" action="">
+              <label for="button4"></label>
+            </form>
+            <p>&nbsp;</p>
+          </div>
+          <div align="center" class="alert-dismissable">
+            <tr>
+              <td width="99" bordercolor="#000000"><table width="1039" height="256" border="0" class="table">
+                <tr>
+                  <td width="29" bgcolor="#FFFFFF" style="font-weight: normal"><strong>ID</strong></td>
+                  <td width="91" bgcolor="#FFFFFF" style="font-weight: normal"><strong>NOMBRE</strong></td>
+                  <td width="99" bgcolor="#FFFFFF" style="font-weight: normal"><strong>APELLIDO</strong></td>
+                  <td width="145" bgcolor="#FFFFFF" style="font-weight: normal"><strong>NOMBRE TUTOR</strong></td>
+                  <td width="102" bgcolor="#FFFFFF" style="font-weight: normal"><strong>TELEFONO</strong></td>
+                  <td width="98" bgcolor="#FFFFFF" style="font-weight: normal; text-decoration: none;"><s><strong>DIRECCION</strong></th></td>
+                  <td width="61" bgcolor="#FFFFFF" style="font-weight: normal"><strong>GRADO</strong></td>
+                  <td width="132" bgcolor="#FFFFFF" style="font-weight: normal"><strong>FEC NACIMIENTO</strong></td>
+                  <td width="45" bgcolor="#FFFFFF" style="font-weight: normal"><strong>EDAD</strong></td>
+                  <td width="15" rowspan="6">&nbsp;</td>
+                  <td width="101"><s>
+                    <input type="submit" name="actualizar" id="btnactualizar" value="ACTUAZALIAR" />
+                  </s></td>
+                  <td width="71"><s>
+                    <input type="text" style="width: 35px; text-align:center; font-weight: bold; background-color:lightblue;" id="idactualizar" />
+                  </s></td>
+                </tr>
+                <tr>
+                  <td height="27" bgcolor="#B1C5F3" id="columna7f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna1f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna2f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna3f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna4f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna5f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna6f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna8f1">&nbsp;</td>
+                  <td bgcolor="#B1C5F3" id="columna9f1">&nbsp;</td>
+                  <td><s>
+                    <input type="submit" name="nuevoestudiante" id="nuevoestudiante" value="NUEVO" />
+                  </s></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#FFFFFF" id="columna7f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna1f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna2f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna3f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna4f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna5f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna6f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna8f2">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna9f2">&nbsp;</td>
+                  <td><s>
+                  </s></td>
+                </tr>
+                <tr bgcolor="#B1C5F3">
+                  <td id="columna7f3">&nbsp;</td>
+                  <td id="columna1f3">&nbsp;</td>
+                  <td id="columna2f3">&nbsp;</td>
+                  <td id="columna3f3">&nbsp;</td>
+                  <td id="columna4f3">&nbsp;</td>
+                  <td id="columna5f3">&nbsp;</td>
+                  <td id="columna6f3">&nbsp;</td>
+                  <td id="columna8f3">&nbsp;</td>
+                  <td id="columna9f3">&nbsp;</td>
+                </tr>
+                <tr bgcolor="#B1C5F3">
+                  <td bgcolor="#FFFFFF" id="columna7f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna1f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna2f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna3f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna4f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna5f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna6f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna8f4">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" id="columna9f4">&nbsp;</td>
+                </tr>
+                <tr bgcolor="#B1C5F3">
+                  <td id="columna7f5">&nbsp;</td>
+                  <td id="columna1f5">&nbsp;</td>
+                  <td id="columna2f5">&nbsp;</td>
+                  <td id="columna3f5">&nbsp;</td>
+                  <td id="columna4f5">&nbsp;</td>
+                  <td id="columna5f5">&nbsp;</td>
+                  <td id="columna6f5">&nbsp;</td>
+                  <td id="columna8f5">&nbsp;</td>
+                  <td id="columna9f5">&nbsp;</td>
+                </tr>
+              </table></td>
+            </tr>
+            <s><br />
+            </s>
+            <td><s>
+              <input type="submit" name="sigpag" id="paginaanterior" value="Página Anterior" />
+            </s></td>
+            <s>
+              <label id="labelpage"> -  1  - </label>
+            </s>
+            <td><s>
+              <input type="submit" name="sigpag" id="siguientepagina" value="Siguiente Página" />
+            </s></td>
+            <s><br />
+              <br />
+            </s>
+            <td><s>
+              <input type="submit" name="test" id="rellenar" value="RELLENAR TABLA" />
+            </s></td>
+          </div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        </div>
+        <div class="TabbedPanelsContent">
+          <p>
+          <br />
+          <label for="textfield5">            <strong>Agregar Maestro</strong></label>
+          <br />
+            <label for="textfield5">COD MAESTRO:</label>
+            <input type="text" name="textfield5" id="codmaestro" disabled/>
+            <label for="textfield6">NOMBRE:</label>
+            <input type="text" name="textfield5" id="nombremaestro" />
+            <label for="textfield7">APELLIDO:</label>
+            <input type="text" name="textfield5" id="apellidomaestro" />
+          </p>
+          <p>
+            <label for="label">
+              <br />
+              Tel:
+            </label>
+            <input type="tel" name="tel2" id="telmaestro" />
+            <label for="textfield8">Direccion:</label>
+            <input type="text" name="textfield8" id="direccionmaestro" />
+            <input type="button" name="button" id="agregarmaestro" value="AGREGAR" />
+          </p>
+          <p></p>
+          <p>&nbsp; </p>
+          <form method="post" name="form1" class="Estilo1" id="form2">
+            MATERIA
+          </form>
+          <p>
+            <label for="textfield">COD MATERIA:</label>
+            <input type="text" name="textfield4" id="codmateria" disabled/>
+            <label for="textfield2">MATERIA:</label>
+            <input type="text" name="textfield4" id="nombremateria" />
+            <label for="textfield3">COD MAESTRO:</label>
+            <input type="text" name="textfield4" id="codigomaestro" />
+            <input type="button" name="button" id="agregarmateria" value="AGREGAR" />
+          </p>
+          <p>
+            <label for="search">Search:</label>
+            <input type="search" name="search" id="search" />
+          </p>
+          <table width="75%" border="4" cellspacing="0" cellpadding="0">
+            <!-- TemplateBeginRepeat name="RepeatRegion1" -->
+            <tr>
+              <td>COD MATERIA</td>
+              <td><!-- TemplateBeginEditable name="EditRegion4" -->&nbsp;MATERIA<!-- TemplateEndEditable --></td>
+              <td><!-- TemplateBeginEditable name="EditRegion5" -->&nbsp;COD MAESTRO<!-- TemplateEndEditable --></td>
+            </tr>
+            <!-- TemplateEndRepeat -->
+            <tr>
+              <td style="color: #64C6EF">&nbsp;</td>
+              <td style="color: #64C6EF">&nbsp;</td>
+              <td style="color: #64C6EF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+          <td><s>
+              <input type="submit" name="sigpag" id="paginaanterior2" value="Página Anterior" />
+            </s></td>
+            <s>
+              <label id="labelpage2"> -  1  - </label>
+            </s>
+            <td><s>
+              <input type="submit" name="sigpag" id="siguientepagina2" value="Siguiente Página" />
+            </s></td>
+
+        </div>
+        <div class="TabbedPanelsContent">
+          <p>
+            <label for="label2">COD PARTICIPANTE:</label>
+            <input type="text" name="textfield6" id="codigoestudiantcai" />
+            <label for="label3">COD MATERIA:</label>
+            <input type="text" name="textfield6" id="codigomateriacali" />
+            <br />
+
+          </p>
+          <p>
+                      <label for="label4">NOTA:</label>
+            <input type="text" name="textfield6" id="notacali" /> 
+            <label for="label5">OBSERVACION:</label>
+            <input type="text" name="textfield6" id="observacioncali" />
+            <input type="button" name="button3" id="botonagregarcali" value="AGREGAR" />
+          </p>
+          <table width="75%" border="3" cellspacing="0" cellpadding="0">
+            <!-- TemplateBeginRepeat name="RepeatRegion1" -->
+            <tr>
+              <td><!-- TemplateBeginEditable name="EditRegion3" -->&nbsp;COD PARTICIPANTE<!-- TemplateEndEditable --></td>
+              <td><!-- TemplateBeginEditable name="EditRegion4" -->&nbsp;COD MATERIA<!-- TemplateEndEditable --></td>
+              <td><!-- TemplateBeginEditable name="EditRegion5" -->&nbsp;NOTA<!-- TemplateEndEditable --></td>
+              <td><!-- TemplateBeginEditable name="EditRegion6" -->&nbsp;NOTA FINAL<!-- TemplateEndEditable --></td>
+              <td><!-- TemplateBeginEditable name="EditRegion7" -->&nbsp;OBSERVACION<!-- TemplateEndEditable --></td>
+            </tr>
+            <!-- TemplateEndRepeat -->
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="TabbedPanelsContent">
+          <p>
+           <button type="button" id="Registrar" class="btn btn-primary btn-block" onclick="location='index.html'">Cerrar Sesion</button>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <script type="text/javascript">
+<!--
+    var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+//-->
+  </script>
+  <!--Scripts de Conexión-->
+  <script src="Scripts/app.js"></script>
+  <script src="Scripts/AgregarMaestro.js"></script>
+</body>
+</html>

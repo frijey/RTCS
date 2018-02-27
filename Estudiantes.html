@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Spectral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Mantenimiento de Estudiantes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+
+</head>
+<body class="landing">
+    <!--<page wrapper>-->
+    <div id="page-wrapper">
+        <header id="header" class="alt">
+            <h1><a>ESTUDIANTES</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Administrar</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="Estudiantes.html">Estudiantes</a></li>
+                                <li><a href="Profesores.html">Profesores</a></li>
+                                <li><a href="Materias.html">Materias</a></li>
+                                <li><a href="Evaluaciones.html">Evaluaciones</a></li>
+                                <li><a href="Usuarios.html">Usuarios</a></li>
+                                <li><a href="index.html">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+
+                <Banner>
+
+
+                    <div class="inner">
+                        <h2>Mantenimiento de Estudiantes</h2>
+
+                    </div>
+
+                </Banner>
+
+                <table style="height:50%; width:100%;" class="table">
+                    <tr>
+                        <th style="text-align:center;">#</th>
+                        <th style="text-align:center;">Nombre</th>
+                        <th style="text-align:center;">Apellido</th>
+                        <th style="text-align:center;">Nombre de Tutor</th>
+                        <th style="text-align:center;">Teléfono</th>
+                        <th style="text-align:center;">Dirección</th>
+                        <th style="text-align:center;">Grado</th>
+                        <th style="text-align:center;">Fecha Nac</th>
+                        <th style="text-align:center;">Edad</th>
+                    </tr>
+                    <tr>
+                        <td id="columna1f1"></td>
+                        <td id="columna2f1"></td>
+                        <td id="columna3f1"></td>
+                        <td id="columna4f1"></td>
+                        <td id="columna5f1"></td>
+                        <td id="columna6f1"></td>
+                        <td id="columna7f1"></td>
+                        <td id="columna8f1"></td>
+                        <td id="columna9f1"></td>
+                    </tr>
+                    <tr>
+                        <td id="columna1f2"></td>
+                        <td id="columna2f2"></td>
+                        <td id="columna3f2"></td>
+                        <td id="columna4f2"></td>
+                        <td id="columna5f2"></td>
+                        <td id="columna6f2"></td>
+                        <td id="columna7f2"></td>
+                        <td id="columna8f2"></td>
+                        <td id="columna9f2"></td>
+                    </tr>
+                    <tr>
+                        <td id="columna1f3"></td>
+                        <td id="columna2f3"></td>
+                        <td id="columna3f3"></td>
+                        <td id="columna4f3"></td>
+                        <td id="columna5f3"></td>
+                        <td id="columna6f3"></td>
+                        <td id="columna7f3"></td>
+                        <td id="columna8f3"></td>
+                        <td id="columna9f3"></td>
+                    </tr>
+                    <tr>
+                        <td id="columna1f4"></td>
+                        <td id="columna2f4"></td>
+                        <td id="columna3f4"></td>
+                        <td id="columna4f4"></td>
+                        <td id="columna5f4"></td>
+                        <td id="columna6f4"></td>
+                        <td id="columna7f4"></td>
+                        <td id="columna8f4"></td>
+                        <td id="columna9f4"></td>
+                    </tr>
+                    <tr>
+                        <td id="columna1f5"></td>
+                        <td id="columna2f5"></td>
+                        <td id="columna3f5"></td>
+                        <td id="columna4f5"></td>
+                        <td id="columna5f5"></td>
+                        <td id="columna6f5"></td>
+                        <td id="columna7f5"></td>
+                        <td id="columna8f5"></td>
+                        <td id="columna9f5"></td>
+                    </tr>
+                </table>
+
+                <button type="button" id="paginaanterior" class="button special">Pag anterior</button>
+                <button type="button" id="siguientepagina" class="button special">Pag siguiente</button>
+                <br />
+                <br />
+                <label id="labelpage">Página: 1 </label>
+                <br />
+
+                <!--<a href="#one" class="more scrolly">Mantenimiento</a>-->
+
+
+            </div>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="wrapper style1 special">
+            <div align="center" class="alert-dismissable" style="height:90%">
+                
+                <Banner>
+                    <div class="inner">
+                        <h2>Crear Estudiante</h2>
+                    </div>
+                </Banner>
+
+                <input type="email" class="alert-dismissable" name="email" id="emailregistrar" style="text-align:center;" placeholder="Email" />
+                <br />
+                <input type="password" class="active" name="password" id="passwordregistrar" style="text-align:center;" placeholder="Contraseña" />
+                <br />
+                <input type="password" class="active" name="password" id="rpasswordregistrar" style="text-align:center;" placeholder="Repita la Contraseña" />
+                <br />
+                <label>Tipo de Cuenta</label>
+                <select id="tipousuario" style="text-align-last:center;" onchange="CambioElSelect();">
+                    <option value="Profesor" style="text-align:center;">Profesor</option>
+                    <option value="Estudiante" style="text-align:center;">Estudiante</option>
+                    <option value="Padre" style="text-align:center;">Padre</option>
+                    <option value="Administrador" style="text-align:center;">Administrador</option>
+                </select>
+                <br />
+                <input type="hidden" name="idestudiante" id="iddelestudiante" style="text-align:center;" placeholder="ID del Estudiante" />
+                <br />
+                <button type="button" id="Registrar" class="button special">Registrar</button>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="Scripts/RegistrarEstudiante.js"></script>
+</body>
+</html>
